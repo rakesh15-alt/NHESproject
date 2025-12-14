@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animated Background + Button</title>
+    <style>
+        /* Full-page animated gradient background */
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(-45deg, #2e2e2e, #3a3a4d, #2e2e2e, #4d4d5e);
+            background-size: 400% 400%;
+            animation: gradientBG 10s ease infinite;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .neon-box {
+            padding: 30px 50px;
+            border: 2px solid #00eaff;
+            border-radius: 10px;
+            animation: glow-border 1.5s ease-in-out infinite alternate;
+            backdrop-filter: blur(5px);
+        }
+        .neon-text {
+            font-family: Arial, sans-serif;
+            font-size: 48px;
+            font-weight: bold;
+            color: #00f5ff;
+            text-decoration: none;
+            text-align: center;
+            opacity: 0;
+            animation: popup 1.2s ease-out forwards;
+            animation-delay: 0.2s;
+            text-shadow:
+                0 0 5px #00f5ff,
+                0 0 15px #00f5ff,
+                0 0 30px #00f5ff,
+                0 0 60px #00eaff;
+        }
+        @keyframes popup {
+            0% {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        @keyframes glow-border {
+            from {
+                box-shadow: 0 0 10px #00dfff, 0 0 20px #00eaff;
+            }
+            to {
+                box-shadow: 0 0 20px #00eaff, 0 0 40px #00ffff;
+            }
+        }
+        .neon-text:hover {
+            color: #ffffff;
+            text-shadow: 0 0 20px #ffffff, 0 0 40px #00f5ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="neon-box">
+        <a href="FRONTPAGE.HTML" class="neon-text">LET’S GET STARTED</a>
+    </div>
+</body>
+</html>

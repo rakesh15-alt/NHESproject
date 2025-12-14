@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Front Page</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: #fff;
+  }
+
+  header {
+    background: #000;
+    padding: 30px;
+    font-size: clamp(36px, 8vw, 72px);
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff0000;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .slogan-container {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+
+  .circle-container {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+  .circle-img {
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    width: 120px;
+    height: 120px;
+    border: 3px solid #00eaff;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  .circle-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .faculty-section {
+    margin-top: 50px;
+    padding: 20px 40px;
+  }
+
+  .faculty-title {
+    font-size: 34px;
+    font-weight: bold;
+    color: #00eaff;
+    text-shadow: 0 0 8px #00cfff;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .faculty-link {
+    display: block;
+    font-size: 26px;
+    font-weight: bold;
+    color: #00d1ff;
+    margin-top: 20px;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 2px solid #00eaff;
+    width: fit-content;
+  }
+  .faculty-link:hover {
+    color: #fff;
+    text-shadow: 0px 0px 8px #00eaff;
+  }
+</style>
+</head>
+<body>
+
+<header>SANKARGURU VIDYAPEETH</header>
+
+<div class="slogan-container">
+  <div class="circle-container">
+    <svg viewBox="0 0 220 220" width="100%" height="100%">
+      <defs>
+        <path id="topArc" d="M 30,130 a 80,80 0 0,1 160,0" fill="none"/>
+      </defs>
+      <text font-size="16px" font-weight="bold" fill="#00ffff">
+        <textPath xlink:href="#topArc" startOffset="50%" text-anchor="middle">
+          DREAM BELIEVE ACHIEVE
+        </textPath>
+      </text>
+    </svg>
+
+    <div class="circle-img">
+      <img src="your-logo.png" alt="School Logo">
+    </div>
+  </div>
+</div>
+
+<!-- OUR FACULTY section with links -->
+<div class="faculty-section">
+  <h2 class="faculty-title">OUR FACULTY</h2>
+
+  <a href="teachers.html" class="faculty-link">1. TEACHERS</a>
+  <a href="principal.html" class="faculty-link">2. PRINCIPAL / VICE PRINCIPAL</a>
+  <a href="classes.html" class="faculty-link">3. CLASSES</a>
+  <a href="safety.html" class="faculty-link">4. SAFETY</a>
+  <a href="achievements.html" class="faculty-link">5. ACHIEVEMENTS</a>
+
+</div>
+<!-- WHAT WE PROVIDE Section -->
+<style>
+  /* Animated Gradient Frame */
+  .provide-frame {
+    background: linear-gradient(135deg, #0d0d0d, #111, #0d0d0d);
+    border: 3px solid #00eaff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    animation: gradientShift 10s ease infinite;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
+    margin: 50px auto;
+    max-width: 900px;
+    color: #fff;
+  }
+
+  /* Keyframes for subtle animated gradient */
+  @keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .provide-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00eaff;
+    text-shadow: 0 0 8px #00cfff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .provide-text {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+</style>
+
+<div class="provide-frame">
+  <div class="provide-title">WHAT WE PROVIDE?</div>
+
+  <p class="provide-text">At Sankarguru Vidyapeeth, we cultivate an environment where academic excellence and personal growth go hand in hand.</p>
+  <p class="provide-text">Our dedicated faculty deliver engaging lessons that inspire critical thinking and creativity.</p>
+  <p class="provide-text">Modern classrooms with digital tools make learning interactive and enjoyable.</p>
+  <p class="provide-text">Well‑equipped science and computer labs help students explore concepts through hands‑on experience.</p>
+  <p class="provide-text">A rich library full of books and learning resources encourages reading and self‑study.</p>
+  <p class="provide-text">We support co‑curricular activities like music, art, drama, and dance to nurture creativity.</p>
+  <p class="provide-text">Structured sports programs promote fitness, teamwork, and healthy competition.</p>
+  <p class="provide-text">Regular workshops and seminars help students build confidence and real‑world skills.</p>
+  <p class="provide-text">Hygiene‑focused facilities ensure clean drinking water and a healthy learning environment.</p>
+  <p class="provide-text">Our safety measures, including CCTV and secure access, protect every student.</p>
+  <p class="provide-text">We celebrate diversity and promote an inclusive, respectful school culture.</p>
+  <p class="provide-text">Cultural festivals and school events create joyful experiences and lasting memories.</p>
+  <p class="provide-text">We encourage technology literacy through guided digital learning opportunities.</p>
+  <p class="provide-text">Personalized mentoring helps students set goals and achieve success.</p>
+  <p class="provide-text">Environmental awareness projects cultivate responsibility toward nature.</p>
+  <p class="provide-text">Strong parent‑teacher partnerships support each student’s journey.</p>
+  <p class="provide-text">Character building and ethical values are an essential part of our curriculum.</p>
+  <p class="provide-text">We prepare students not only for exams, but for life and future challenges.</p>
+  <p class="provide-text">Every child is empowered to discover their potential with confidence and integrity.</p>
+</div>
+<!-- OUR VISION Section -->
+<style>
+  /* Animated Gradient Frame (Vision) */
+  .vision-frame {
+    background: linear-gradient(135deg, #0d0d0d, #111, #0d0d0d);
+    background-size: 400% 400%;
+    border: 3px solid #00eaff;
+    border-radius: 12px;
+    padding: 30px 40px;
+    animation: visionGradientShift 12s ease infinite;
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.4);
+    margin: 50px auto;
+    max-width: 900px;
+    color: #fff;
+  }
+
+  @keyframes visionGradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+
+  .vision-title {
+    font-size: 32px;
+    font-weight: bold;
+    color: #00eaff;
+    text-shadow: 0 0 8px #00cfff;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .vision-text {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+  }
+</style>
+
+<div class="vision-frame">
+  <div class="vision-title">OUR VISION</div>
+
+  <p class="vision-text">At Sankarguru Vidyapeeth, our vision is to be a guiding light of education and opportunity for every child in our community, especially in areas where many families have limited exposure to formal learning.</p>
+  <p class="vision-text">We aspire to transform lives by making quality education accessible to all, igniting curiosity and hope in young hearts.</p>
+  <p class="vision-text">We see a future where every student, regardless of background, gains the confidence to pursue knowledge and dream without boundaries.</p>
+  <p class="vision-text">Our vision is to nurture students into compassionate, responsible, and resilient individuals who contribute meaningfully to society.</p>
+  <p class="vision-text">We aim to cultivate a learning environment that builds strong academic foundations while celebrating cultural values and character development.</p>
+  <p class="vision-text">We envision a school where creativity flourishes and students are empowered to explore their unique talents.</p>
+  <p class="vision-text">Through unwavering commitment, we strive to remove barriers to education and show families the lifelong value of learning.</p>
+  <p class="vision-text">We work hand‑in‑hand with parents and the community to support every child’s growth and well‑being.</p>
+  <p class="vision-text">We encourage life skills and emotional resilience so our learners face challenges with courage and optimism.</p>
+  <p class="vision-text">Our school dreams of becoming a center of excellence that uplifts students and inspires community transformation.</p>
+  <p class="vision-text">With integrity, empathy, and dedication, we open doors of opportunity and pave the way for a brighter, more educated tomorrow.</p>
+</div>
+
+
+
+
+</body>
+</html>
+
