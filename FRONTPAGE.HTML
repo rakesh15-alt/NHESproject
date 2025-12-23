@@ -107,6 +107,49 @@
     box-shadow: 0 0 25px #00eaff;
   }
 </style>
+
+<style>
+  /* CONTACT BAR */
+  .contact-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    border-top: 2px solid #00eaff;
+    box-shadow: 0 -5px 15px rgba(0, 234, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 14px 10px;
+    z-index: 999;
+  }
+
+  .contact-item {
+    color: #00eaff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+  }
+
+  .contact-item:hover {
+    color: #fff;
+    text-shadow: 0 0 10px #00eaff;
+  }
+
+  @media (max-width: 600px) {
+    .contact-bar {
+      flex-direction: column;
+      gap: 12px;
+      text-align: center;
+    }
+  }
+</style>
+
 </head>
 
 <body>
@@ -260,10 +303,22 @@
   <p class="vision-text">With integrity, empathy, and dedication, we open doors of opportunity and pave the way for a brighter, more educated tomorrow.</p>
 </div>
 
+<!-- CONTACT BAR -->
+<div class="contact-bar">
+  <a href="tel:+917086414853" class="contact-item">
+    📞 +91 70864 14853
+  </a>
+
+  <a href="mailto:sankarguruvidyapeeth@gmail.com" class="contact-item">
+    ✉️ sankarguruvidyapeeth@gmail.com
+  </a>
+</div>
+
 
 
 </body>
 </html>
+
 
 
 
