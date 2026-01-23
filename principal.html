@@ -4,12 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Principal & Vice Principal</title>
-
 <style>
   body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
     background: #111;
     color: #fff;
   }
@@ -28,15 +27,20 @@
   .leadership-container {
     display: flex;
     justify-content: center;
-    gap: 2.5rem;
+    gap: 3rem;
     flex-wrap: wrap;
-    padding: 0 20px 40px 20px;
+    padding: 0 20px 60px 20px;
   }
 
-  /* CARD WRAPPER FOR 3D FLIP */
+  /* ===== CARD WRAPPER ===== */
+  .card-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
   .card-flip {
     width: 320px;
-    height: 200px;
+    height: 400px;
     perspective: 1500px;
   }
 
@@ -52,43 +56,58 @@
     transform: rotateY(180deg);
   }
 
-  /* COMMON CARD SIDES */
   .card-front,
   .card-back {
     position: absolute;
     width: 100%;
     height: 100%;
-    border-radius: 12px;
+    border-radius: 16px;
     backface-visibility: hidden;
-    border: 2px solid #00eaff;
     overflow: hidden;
     box-shadow: 0 4px 14px rgba(0, 255, 255, 0.25);
   }
 
-  /* FRONT OF CARD */
   .card-front {
-    background: #1a1a1a;
     display: flex;
-    flex-direction: column;
+    align-items: flex-end;
     justify-content: center;
-    align-items: center;
+    position: relative;
   }
 
-  .card-front h2 {
-    font-size: 1.7rem;
+  .card-front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.6);
+    transition: transform 0.6s ease;
+  }
+
+  .card-flip:hover .card-front img {
+    transform: scale(1.08);
+  }
+
+  .card-front-text {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background: linear-gradient(to top, rgba(0, 255, 255, 0.4), transparent);
     color: #00eaff;
+    text-shadow: 0 0 8px #00cfff;
+  }
+
+  .card-front-text h2 {
     margin: 0;
-    text-shadow: 0 0 6px #00cfff;
+    font-size: 1.7rem;
   }
 
-  .card-front p {
+  .card-front-text p {
+    margin-top: 5px;
     font-size: 1.3rem;
-    color: #fff;
     font-weight: bold;
-    margin-top: 8px;
   }
 
-  /* BACK OF CARD */
   .card-back {
     background: #000;
     transform: rotateY(180deg);
@@ -96,23 +115,51 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 15px;
+    padding: 25px;
+    border: 2px solid #00eaff;
   }
 
   .card-back h3 {
     font-size: 1.6rem;
     color: #00eaff;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
   }
 
   .card-back p {
     font-size: 1.1rem;
     color: #fff;
     text-align: center;
-    line-height: 1.4;
+    line-height: 1.5;
   }
 
-  /* BACK BUTTON */
+  /* ===== NEON GLOW ===== */
+  .card-glow {
+    position: absolute;
+    bottom: -15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 15px;
+    border-radius: 50%;
+    filter: blur(12px);
+    z-index: -1;
+    animation: pulseGlow 1.5s infinite alternate;
+  }
+
+  /* Individual glow colors */
+  .card-glow.principal {
+    background: rgba(0, 234, 255, 0.4);
+  }
+
+  .card-glow.vice {
+    background: rgba(255, 78, 205, 0.4);
+  }
+
+  @keyframes pulseGlow {
+    0% { transform: translateX(-50%) scaleX(0.9); opacity:0.5; }
+    100% { transform: translateX(-50%) scaleX(1.1); opacity:1; }
+  }
+
   .back-btn {
     display: inline-block;
     padding: 14px 22px;
@@ -134,8 +181,17 @@
     box-shadow: 0 6px 14px rgba(0, 255, 255, 0.35);
     transform: translateY(-3px);
   }
-</style>
 
+  @media(max-width:768px){
+    .card-flip {
+      width: 90%;
+      height: 380px;
+    }
+    .card-back p {
+      font-size: 1rem;
+    }
+  }
+</style>
 </head>
 <body>
 
@@ -144,46 +200,47 @@
 <div class="leadership-container">
 
   <!-- Principal Flip Card -->
-  <div class="card-flip">
-    <div class="card-inner">
-
-      <!-- FRONT -->
-      <div class="card-front">
-        <h2>Principal</h2>
-        <p>JOSHNA ADHIKARI CHAPAI</p>
+  <div class="card-wrapper">
+    <div class="card-flip">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e" alt="Principal Photo">
+          <div class="card-front-text">
+            <h2>Principal</h2>
+            <p>JOSHNA ADHIKARI CHAPAI</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <h3>About Principal</h3>
+          <p>Mrs. Joshna Adhikari Chapai is dedicated to academic excellence and nurturing each student’s potential. With years of leadership experience, she guides the school with vision and heart.</p>
+        </div>
       </div>
-
-      <!-- BACK -->
-      <div class="card-back">
-        <h3>About Principal</h3>
-        <p>Mrs. Joshna Adhikari Chapai is dedicated to academic excellence and nurturing each student’s potential. With years of leadership experience, she guides the school with vision and heart.</p>
-      </div>
-
     </div>
+    <div class="card-glow principal"></div>
   </div>
 
   <!-- Vice Principal Flip Card -->
-  <div class="card-flip">
-    <div class="card-inner">
-
-      <!-- FRONT -->
-      <div class="card-front">
-        <h2>Vice Principal</h2>
-        <p>GYAN CHAPAI</p>
+  <div class="card-wrapper">
+    <div class="card-flip">
+      <div class="card-inner">
+        <div class="card-front">
+          <img src="https://images.unsplash.com/photo-1603415526960-f2f6a8f1e44c" alt="Vice Principal Photo">
+          <div class="card-front-text">
+            <h2>Vice Principal</h2>
+            <p>GYAN CHAPAI</p>
+          </div>
+        </div>
+        <div class="card-back">
+          <h3>About Vice Principal</h3>
+          <p>Mr. Gyan Chapai supports the academic and administrative programs with dedication and energy. He ensures smooth school operations and student success through encouragement and discipline.</p>
+        </div>
       </div>
-
-      <!-- BACK -->
-      <div class="card-back">
-        <h3>About Vice Principal</h3>
-        <p>Mr. Gyan Chapai supports the academic and administrative programs with dedication and energy. He ensures smooth school operations and student success through encouragement and discipline.</p>
-      </div>
-
     </div>
+    <div class="card-glow vice"></div>
   </div>
 
 </div>
 
-<!-- Back to Faculty Button -->
 <div style="text-align: center;">
   <a href="index.html" class="back-btn">⬅ Back to Home</a>
 </div>
